@@ -1,0 +1,152 @@
+/* ==========================================================================
+   YOUI FASHION - STUDIO BAG STYLE SYSTEM (cart.css)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cart-page-body {
+    background-color: #080a09 !important; /* Premium deep black vibe theme */
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+/* --- SYSTEM SYNCHRONIZED NAVIGATION MENU BAR --- */
+.custom-navbar {
+    background: rgba(10, 10, 10, 0.75) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+.custom-navbar .navbar-nav .nav-link { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); padding: 0 1.2rem !important; }
+.custom-navbar .navbar-nav .nav-link:hover { color: #ffffff !important; }
+
+/* Active Cart State Marker */
+.cart-active-indicator {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+.active-badge-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* --- COUOTURE TYPOGRAPHY SETTINGS --- */
+.font-elegant { font-family: 'Cinzel', serif; }
+.tracking-widest { letter-spacing: 5px; }
+.tracking-wide { letter-spacing: 2px; }
+.cart-workspace-padding { padding-top: 130px; padding-bottom: 60px; }
+.cart-micro-tag { font-size: 0.75rem; letter-spacing: 5px; }
+.pointer { cursor: pointer; }
+
+/* --- LEFT SIDE: CART ROW DESIGN --- */
+.cart-item-img-frame {
+    width: 90px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.border-secondary-dark {
+    border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.remove-item-btn {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+.remove-item-btn:hover {
+    color: #dc3545 !important; /* Lights up clean crimson on selection hover */
+}
+
+.continue-shopping-link {
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+.continue-shopping-link:hover {
+    color: #ffffff !important;
+}
+
+/* --- RIGHT SIDE: FROSTED SUMMARY CARD PANEL --- */
+.summary-frosted-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 0px; /* Sharp clean geometric borders */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* --- INTERACTIVE ACTION TRIGGER OVERRIDES --- */
+.btn-checkout-luxury {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0px !important;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem !important;
+    font-weight: 500;
+    transition: all 0.4s ease !important;
+}
+
+.btn-checkout-luxury:hover {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5) !important;
+}
+.btn-signin {
+    background-color: #ffffff;
+    color: #000000 !important;
+    border: 1px solid #ffffff;
+    border-radius: 20px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.45rem 1.5rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-signin:hover {
+    background-color: transparent;
+    color: #ffffff !important;
+}
+.fav-active-indicator {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+.fav-active-indicator a{
+    color: inherit !important;          /* Inherits the text color of whatever container it sits inside */
+    text-decoration: none !important;
+}

@@ -1,0 +1,233 @@
+/* ==========================================================================
+   YOUI FASHION - EDITORIAL PRODUCT SHEET DESIGN SYSTEM (p1.css)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product-page-body {
+    background-color: #080a09 !important; /* Uniform luxury canvas background shadow */
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+/* --- SYSTEM SYNCHRONIZED TOP MENU BAR DECORATIONS --- */
+.custom-navbar {
+    background: rgba(10, 10, 10, 0.75) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+.custom-navbar .navbar-nav .nav-link { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); padding: 0 1.2rem !important; }
+.custom-navbar .navbar-nav .nav-link.active, .custom-navbar .navbar-nav .nav-link:hover { color: #ffffff !important; }
+.back-shop-btn { font-size: 0.75rem; letter-spacing: 2px; color: rgba(255, 255, 255, 0.5) !important; transition: color 0.3s ease; }
+.back-shop-btn:hover { color: #ffffff !important; }
+
+/* --- CORE SCHEMATIC PRESENTATION TYPOGRAPHY --- */
+.font-elegant { font-family: 'Cinzel', serif; }
+.font-elegant-serif { font-family: 'Playfair Display', serif; font-style: italic; }
+.tracking-widest { letter-spacing: 5px; }
+.tracking-wide { letter-spacing: 2px; }
+
+/* --- LEFT HALF VIEWPORT ENGINE --- */
+.image-showcase-side {
+    height: 100vh;
+    min-height: 500px;
+}
+
+.product-main-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.image-shade-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(to top, #080a09, rgba(0,0,0,0));
+    pointer-events: none;
+}
+
+/* --- RIGHT HALF DETAILS ENVIRONMENT --- */
+.bg-details-side {
+    background-color: #080a09;
+    min-height: 100vh;
+}
+
+.product-details-content-box {
+    max-width: 520px;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.product-micro-tag {
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+}
+
+/* --- SELECTORS & FORMS ENGINE CUSTOM UTILITIES --- */
+.control-micro-label {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    display: block;
+}
+
+.product-sheet-select, .product-sheet-input, .product-sheet-textarea {
+    background-color: #121614 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    border-radius: 0px !important;
+    font-size: 0.8rem !important;
+    padding: 0.6rem 1rem !important;
+    box-shadow: none !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.product-sheet-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.2) !important;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.product-sheet-select:focus, .product-sheet-input:focus, .product-sheet-textarea:focus {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* --- TRANSACTION INTERACTIVE BUTTON OVERRIDES --- */
+.btn-add-to-bag {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0px !important; /* Sharp signature couture edge line boundaries */
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 0.85rem !important;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.btn-add-to-bag:hover {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Responsive screen adaptation rules overrides for generic vertical phone screens */
+@media (max-width: 767.98px) {
+    .image-showcase-side {
+        height: 65vh;
+    }
+    .product-details-content-box {
+        padding: 1rem 0;
+    }
+    .layout-wrapper {
+        padding-top: 70px !important;
+    }
+}
+.stock-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0px; /* Kept geometric and clean matching your theme */
+    margin-bottom: 1.5rem;
+}
+
+/* --- VARIANT A: LOW STOCK DESIGN --- */
+.stock-low-alert {
+    background-color: rgba(220, 130, 10, 0.08); /* Sophisticated minimal amber background */
+    border: 1px solid rgba(99, 32, 5, 0.25);
+    color: #ff3907;
+}
+
+/* Pulsing warning dot indicator */
+.pulse-indicator-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #f82905;
+    border-radius: 50%;
+    display: inline-block;
+    animation: luxuryPulse 2s infinite ease-in-out;
+}
+
+/* --- VARIANT B: OUT OF STOCK DESIGN --- */
+.stock-out-alert {
+    background-color: rgba(255, 255, 255, 0.03); /* Matte charcoal backdrop filter blend */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.static-muted-dot {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* --- ANIMATION CONTROLLER FRAME --- */
+@keyframes luxuryPulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0.4;
+    }
+}
+.product-details-content-box p {
+    color: #ffffffb9 !important; /* Forces the description text to turn solid white */
+}
+.fav-active-indicator {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+.fav-active-indicator a{
+    color: inherit !important;          /* Inherits the text color of whatever container it sits inside */
+    text-decoration: none !important;}
+    .btn-signin {
+    background-color: #ffffff;
+    color: #000000 !important;
+    border: 1px solid #ffffff;
+    border-radius: 20px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.45rem 1.5rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-signin:hover {
+    background-color: transparent;
+    color: #ffffff !important;
+}

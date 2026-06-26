@@ -1,0 +1,147 @@
+/* ==========================================================================
+   YUMNA STUDIO - PREMIUM FAQ DESIGN SYSTEM ENGINE (fq.css)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Clear default blue link decorations globally */
+a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.fq-page-body {
+    background-color: #080a09 !important; /* Signature uniform off-black canvas velvet background */
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+/* --- CEILING SYSTEM SYNCHRONIZED NAVBAR --- */
+.custom-navbar {
+    background: rgba(10, 10, 10, 0.9) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    z-index: 1000;
+}
+
+.custom-navbar .navbar-brand {
+    color: #ffffff !important;
+}
+
+.custom-navbar .navbar-nav .nav-link { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 0.85rem; 
+    color: rgba(255, 255, 255, 0.75) !important; 
+    padding: 0 1.2rem !important; 
+}
+.custom-navbar .navbar-nav .nav-link:hover { color: #ffffff !important; }
+
+/* Navbar layout utility anchors count badges */
+.nav-utility-target { position: relative; padding: 0.35rem; transition: transform 0.2s ease; }
+.nav-utility-target:hover { transform: scale(1.1); }
+.utility-icon { font-size: 1.25rem; line-height: 1; }
+.utility-counter-badge { top: 5px !important; left: 100% !important; font-size: 0.65rem !important; font-weight: 600 !important; padding: 0.25em 0.45em !important; color: #000000 !important; }
+
+/* Global Fonts Typographic Resets */
+.font-elegant { font-family: 'Cinzel', serif; }
+.font-elegant-serif { font-family: 'Playfair Display', serif; font-style: italic; }
+.tracking-widest { letter-spacing: 5px; }
+.tracking-wide { letter-spacing: 2px; }
+.fq-workspace-padding { padding-top: 135px; padding-bottom: 60px; }
+.fq-micro-tag { font-size: 0.75rem; letter-spacing: 5px; display: block; }
+
+/* --- LEFT SIDE: FIXED CUSTOMER HELP ACTIONS --- */
+.sticky-help-panel {
+    position: sticky;
+    top: 135px; /* Hard-locks aligned with the main timeline workspace start row row */
+}
+
+.help-action-card {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.3s ease;
+}
+
+.help-action-card:hover {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    transform: translateY(-2px);
+}
+
+/* --- RIGHT SIDE: LUXURY ACCORDION SYSTEM --- */
+.custom-dark-accordion .accordion-item {
+    background-color: rgba(255, 255, 255, 0.015) !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Force accordion question trigger headers to custom white mode styling blocks */
+.custom-dark-accordion .accordion-button {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 1.25rem 1.5rem !important;
+    box-shadow: none !important;
+}
+
+/* Swaps default Bootstrap icon arrow fill parameters to custom crisp white tint paths */
+.custom-dark-accordion .accordion-button::after {
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.custom-dark-accordion .accordion-body {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
+    padding: 1.5rem !important;
+    line-height: 1.8;
+}
+
+/* Small device viewport layout margins cleanup */
+@media (max-width: 767.98px) {
+    .sticky-help-panel {
+        position: static !important;
+    }
+}
+.btn-signin {
+    background-color: #ffffff;
+    color: #000000 !important;
+    border: 1px solid #ffffff;
+    border-radius: 20px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.45rem 1.5rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-signin:hover {
+    background-color: transparent;
+    color: #ffffff !important;
+}
+.fav-active-indicator a{
+    color: inherit !important;          /* Inherits the text color of whatever container it sits inside */
+    text-decoration: none !important;
+}
+.fav-active-indicator {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}

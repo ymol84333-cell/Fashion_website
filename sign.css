@@ -1,0 +1,202 @@
+/* ==========================================================================
+   YUMNA STUDIO - EDITORIAL REGISTRATION FIXED STYLESHEET (registration.css)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Force links to prioritize readable white/inherited text colors */
+a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.register-page-body {
+    background-color: #080a09 !important; /* Matte off-black luxury baseline */
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+/* --- CEILING HEADER BAR DECORATIONS --- */
+.custom-navbar {
+    background: rgba(10, 10, 10, 0.9) !important; /* Slightly denser backdrop opacity fill */
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    z-index: 1000;
+}
+
+/* Lock text colors to pure white so they never fade to gray */
+.custom-navbar .navbar-brand {
+    color: #ffffff !important;
+}
+.custom-navbar .navbar-nav .nav-link { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 0.85rem; 
+    color: rgba(255, 255, 255, 0.75) !important; 
+    padding: 0 1.2rem !important; 
+}
+.custom-navbar .navbar-nav .nav-link:hover { 
+    color: #ffffff !important; 
+}
+
+/* Navbar utilities icon alignment badges */
+.nav-utility-target { position: relative; padding: 0.35rem; transition: transform 0.2s ease; }
+.nav-utility-target:hover { transform: scale(1.1); }
+.utility-icon { font-size: 1.25rem; line-height: 1; }
+.utility-counter-badge { top: 5px !important; left: 100% !important; font-size: 0.65rem !important; font-weight: 600 !important; padding: 0.25em 0.45em !important; color: #000000 !important; }
+
+.font-elegant { font-family: 'Cinzel', serif; }
+.font-elegant-serif { font-family: 'Playfair Display', serif; font-style: italic; }
+.tracking-widest { letter-spacing: 5px; }
+.tracking-wide { letter-spacing: 2px; }
+
+/* --- LEFT SIDE: FIXED VIEWPORT PHOTO COLUMN --- */
+.editorial-image-side {
+    background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 100vh !important; /* Hard-locks height layout box to fill monitor tracking length */
+    height: 100%;
+}
+
+.editorial-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(8, 10, 9, 0.2), rgba(8, 10, 9, 0.85)) !important;
+    z-index: 1;
+}
+
+.editorial-branding-box {
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    right: 8%;
+    z-index: 2;
+}
+
+.editorial-micro-tag { font-size: 0.75rem; letter-spacing: 6px; }
+
+/* --- RIGHT SIDE: INPUTS DETAILS WORKSPACE --- */
+.bg-form-side {
+    background-color: #080a09 !important;
+    min-height: 100vh !important;
+   
+}
+
+.register-editorial-form-box {
+    max-width: 400px;
+    width: 100%;
+}
+
+.register-micro-tag {
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    display: block;
+}
+
+.border-secondary-dark {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* --- FORM TEXT FIELDS STYLING --- */
+.fashion-minimal-form .minimal-input {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 0px !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    padding: 1.1rem 0.25rem !important;
+    box-shadow: none !important;
+    transition: border-color 0.4s ease !important;
+}
+
+.fashion-minimal-form .minimal-input::placeholder {
+    color: rgba(255, 255, 255, 0.3) !important;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.fashion-minimal-form .minimal-input:focus {
+    border-bottom-color: #ffffff !important; 
+}
+
+/* --- LUXURY BUTTONS CONTROLS --- */
+.btn-submit-luxury {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0px !important;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem !important;
+    font-weight: 500;
+    letter-spacing: 3px;
+    transition: all 0.4s ease !important;
+}
+
+.btn-submit-luxury:hover {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+.login-toggle-link {
+    color: #ffffff !important;
+    transition: opacity 0.3s ease;
+}
+.login-toggle-link:hover {
+    opacity: 0.6;
+    text-decoration: underline !important;
+}
+
+/* Small Device Stack Adaptations */
+@media (max-width: 767.98px) {
+    .bg-form-side {
+        padding-top: 100px !important;
+    }
+}
+.fav-active-indicator {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+.fav-active-indicator a{
+    color: inherit !important;          /* Inherits the text color of whatever container it sits inside */
+    text-decoration: none !important;}
+    .btn-signin {
+    background-color: #ffffff;
+    color: #000000 !important;
+    border: 1px solid #ffffff;
+    border-radius: 20px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.45rem 1.5rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+

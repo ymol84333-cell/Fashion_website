@@ -1,0 +1,704 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+}
+
+.bg-video-container{
+    position: fixed;
+    overflow: hidden;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+.bg-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.custom-navbar {
+    background: rgba(10, 10, 10, 0.65) !important; /* Semi-translucent dark tone */
+    backdrop-filter: blur(12px); /* Premium frosty background blur */
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Minimalist horizontal divider line */
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    transition: all 0.4s ease;
+}
+
+/* Navigation Links Decoration */
+.custom-navbar .navbar-nav .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover,
+.custom-navbar .navbar-nav .nav-link.active {
+    color: #ffffff !important;
+}
+
+/* Elegant Underline Indicator for Active/Hover State */
+.custom-navbar .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1.2rem;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover::after,
+.custom-navbar .navbar-nav .nav-link.active::after {
+    width: calc(100% - 2.4rem);
+}
+
+/* --- SEARCH BAR DECORATION --- */
+.search-input {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px; /* Sharp editorial design edges */
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.search-input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    box-shadow: none; 
+    width: 240px; 
+}
+
+.btn-signin {
+    background-color: #ffffff;
+    color: #000000 !important;
+    border: 1px solid #ffffff;
+    border-radius: 20px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.45rem 1.5rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-signin:hover {
+    background-color: transparent;
+    color: #ffffff !important;
+}
+.full-page-section {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start; /* Mandatory snap alignment target anchor */
+    position: relative;
+}
+
+/* Give Page 2 a clean luxurious dark translucent layout block overlay */
+#collection {
+    background: rgba(12, 12, 12, 0.92); 
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- 3 HORIZONTAL POP-UP CARDS DECORATION --- */
+.fashion-popup-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3rem 2rem;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Smooth Pop-up/Scale transition settings */
+    transform: translateY(15px);
+    opacity: 0.85;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease, 
+                opacity 0.4s ease;
+}
+
+.card-number {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    transition: color 0.4s ease;
+}
+
+/* --- THE PURE CSS INTERACTIVE HOVER POP-UP TRIGGER --- */
+.fashion-popup-card:hover {
+    transform: translateY(0px) scale(1.03); /* Lifts up and grows slightly */
+    opacity: 1;
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.fashion-popup-card:hover .card-number {
+    color: rgba(255, 255, 255, 0.15); /* Number shines out more clearly on hover */
+}
+
+/* Fonts and spacing setup shortcuts */
+.font-elegant { font-family: 'Cinzel', serif; }
+.font-elegant-serif { font-family: 'Playfair Display', serif; font-style: italic; }
+.tracking-widest { letter-spacing: 4px; }
+.tracking-wide { letter-spacing: 2px; }
+
+/* Navigation styling overrides */
+.custom-navbar {
+    background: rgba(10, 10, 10, 0.7) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- THE MARQUEE ENGINE WINDOW --- */
+.home-inline-marquee {
+    position: absolute !important;
+    bottom: 0px;   /* Pins layout cleanly straight down onto the viewport baseline floor */
+    left: 0px;
+    width: 100% !important;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    z-index: 10;   /* Keeps layer sitting cleanly over fixed backdrop video */
+}
+.logo-marquee-wrapper {
+    display: flex;
+    overflow: hidden; 
+    user-select: none;
+    gap: 4rem; 
+    width: 100%;
+}
+
+.marquee-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 100%; 
+    gap: 5rem;       
+    animation: scrollInfinite 35s linear infinite; 
+}
+
+.brand-logo-img {
+    height: 26px;               
+    max-width: 130px;
+    object-fit: contain;
+    filter: brightness(0) invert(1) opacity(0.6);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.brand-logo-img:hover {
+    filter: brightness(0) invert(1) opacity(1);
+    transform: scale(1.05);
+}
+
+.logo-marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* --- PURE CSS KEYFRAMES MECHANIC --- */
+@keyframes scrollInfinite {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    100% {
+        transform: translateX(calc(-100% - 4rem)); /* Slides left exactly by its own size width */
+    }
+}
+/* --- NEW SERVICES ASYMMETRICAL LAYOUT --- */
+#services {
+    background: #090b0a; /* Deep charcoal look */
+}
+
+/* Left panel background styling */
+.bg-editorial-dark {
+    background-color: #0d100e;
+    height: 100%;
+}
+
+/* Right panel background styling */
+.bg-services-light {
+    background-color: #121614;
+    height: 100%;
+}
+
+.service-micro-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 4px;
+}
+
+/* Clean divider line separating the left text banner from the right list */
+.editorial-vertical-line {
+    position: absolute;
+    right: 0;
+    top: 15%;
+    width: 1px;
+    height: 70%;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* --- HORIZONTAL WIDE ROWS SYSTEM --- */
+.horizontal-service-row {
+    padding: 2.5rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
+}
+
+/* Large Roman Numeral styling */
+.service-index {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.15);
+    transition: color 0.4s ease;
+}
+
+/* Clean Horizontal row interaction instead of the old box popup look */
+.horizontal-service-row:hover {
+    background-color: rgba(255, 255, 255, 0.015);
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(10px); /* Nudges the entire text row slightly to the right */
+}
+
+.horizontal-service-row:hover .service-index {
+    color: #ffffff; /* Roman numeral lights up on hover */
+}
+
+/* Minimalist Link Action */
+.service-minimal-link {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.horizontal-service-row:hover .service-minimal-link {
+    color: #ffffff;
+}
+/* --- PAGE 4: ABOUT DESIGN PARAMETERS --- */
+#about {
+    background: #080808; /* Near-solid luxurious black */
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* Vertical Typography Rotation Trick */
+.vertical-title-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.vertical-brand-text {
+    transform: rotate(-90deg); /* Flips text on its side */
+    white-space: nowrap;
+    font-size: 0.9rem;
+    letter-spacing: 12px !important; /* Wide editorial spacing */
+    color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Minimalist Geometric Box Frame */
+.about-editorial-frame {
+    width: 100%;
+    height: 480px;
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+/* Offset floating border box outline */
+.about-frame-border {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: -1;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
+}
+
+.about-frame-content {
+    width: 100%;
+    height: 100%;
+}
+
+/* --- INTERACTIVE PURE CSS HOVER STYLES --- */
+.about-editorial-frame:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* On hover, the offset frame snaps perfectly into place behind the main box */
+.about-editorial-frame:hover .about-frame-border {
+    transform: translate(15px, 15px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Narrative content spacing adjustments */
+.about-mini-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+}
+
+.about-narrative-box p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    transition: color 0.3s ease;
+}
+
+/* Subtle editorial text color shift on hover */
+.about-narrative-box:hover p {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Minimalist Design CTA Link */
+.about-cta-btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.about-cta-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px; /* Short elegant visual underline */
+    height: 1px;
+    background-color: #ffffff;
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.about-cta-btn:hover::after {
+    width: 100%; /* Underline expands fully across text link width */
+}
+/* --- PAGE 5: CONTACT DESIGN ENVIRONMENT --- */
+#contact {
+    background: #0a0d0b; /* Sophisticated raw canvas black shadow */
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.contact-micro-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+}
+
+/* --- THE MINIMALIST EDITORIAL INPUTS --- */
+.fashion-minimal-form .minimal-input {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 0px !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    padding: 1rem 0.5rem !important;
+    box-shadow: none !important;
+    transition: border-color 0.4s ease !important;
+}
+
+/* Smooth placeholder formatting shift */
+.fashion-minimal-form .minimal-input::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Elegant line focus glow update */
+.fashion-minimal-form .minimal-input:focus {
+    border-bottom-color: #ffffff !important;
+}
+
+/* Luxury Submit Button Override */
+.btn-submit-luxury {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+}
+
+.btn-submit-luxury:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* --- SOCIAL LINKS DESIGN --- */
+.border-dark-gray {
+    border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.social-editorial-link {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.social-editorial-link:hover {
+    color: #ffffff;
+}
+
+.social-editorial-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.social-editorial-link:hover::after {
+    width: 100%;
+}
+/* --- THE FIXED BACKDROP CAROUSEL ENGINE --- */
+.fixed-carousel-bg {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2; /* Locks the entire moving carousel assembly into the basement */
+    overflow: hidden;
+}
+
+/* Force Carousel wrappers to fill out the absolute screen borders */
+.video-slide-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps your models looking beautiful without layout stretching */
+}
+
+/* Base protection tint layer protecting white font readability */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1; /* Rides perfectly on top of the shifting slides */
+}
+/* --- PREMIUM CARDS BACKDROP SYSTEM --- */
+.unique-fashion-bg {
+    background-size: cover;          /* Crops and fits the photo perfectly */
+    background-position: center;     /* Centers the models inside the layout card box */
+    background-repeat: no-repeat;
+    z-index: 1;                      /* Prepares layout stacking order */
+}
+
+/* Gradient tint mask protecting your white typography visibility */
+.card-image-overlay-tint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.35) 100%);
+    z-index: 2;                      /* Rests cleanly between the photo and text layers */
+    transition: background 0.4s ease;
+}
+
+/* Forces your text layout containers to sit forward on top of the image overlay */
+.fashion-popup-card .card-content-box {
+    position: relative;
+    z-index: 3; 
+}
+
+/* Darkens slightly on hover to highlight the card spotlight premium look */
+.fashion-popup-card:hover .card-image-overlay-tint {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.45) 100%);
+}
+/* --- FABRIC CARD BACKDROP SYSTEM --- */
+.unique-fabric-bg {
+    background-size: cover;          /* Crops and fits the photo perfectly without stretching */
+    background-position: center;     /* Centers the elegant fabric folds inside the card container */
+    background-repeat: no-repeat;
+    z-index: 1;                      /* Keeps everything in the correct layout stacking order */
+}
+/* --- CUSTOMIZE DRESS CARD BACKDROP SYSTEM --- */
+.unique-dress-bg {
+    background-size: cover;          /* Crops and fits the photo perfectly without distortion */
+    background-position: center;     /* Centers the tailor studio details inside the layout card box */
+    background-repeat: no-repeat;
+    z-index: 1;                      /* Keeps everything inside the correct layout sorting order */
+}
+.about-studio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents the image aspect ratio from stretching or distorting */
+    display: block;
+}
+/* --- RESPONSIVE CART SIGN SYSTEM --- */
+.cart-box {
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+/* Master Anchor Target Dimensions */
+.cart-click-target {
+    position: relative;
+    padding: 0.25rem;
+    transition: transform 0.2s ease;
+}
+.cart-click-target:hover {
+    transform: scale(1.08); /* Sophisticated micro-nudge zoom */
+}
+
+/* Fluid Sizing for the Emoji */
+.cart-icon {
+    font-size: 1.25rem; /* Base layout standard size */
+    line-height: 1;
+}
+
+/* Perfect alignment overrides for the count badge */
+.cart-counter-badge {
+    top: 5px !important;
+    left: 100% !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.65rem !important;
+    font-weight: 600 !important;
+    padding: 0.25em 0.45em !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* --- MOBILE SPECIFIC MEDIA BREAKPOINT SCREEN SHIFTS --- */
+@media (max-width: 767.98px) {
+    .cart-icon {
+        font-size: 1.1rem; /* Slightly downsizes on mobile for compact navbar fit */
+    }
+    
+    .cart-counter-badge {
+        top: 2px !important;
+        font-size: 0.6rem !important;
+        padding: 0.2em 0.4em !important;
+    }
+}
+/* ==========================================================================
+   YOUI FASHION - RESPONSIVE FAVORITES SYSTEM (style.css)
+   ========================================================================== */
+
+.favorite-box {
+    display: inline-block;
+}
+
+/* Master Shared Anchor Box Target Dimensions */
+.nav-utility-target {
+    position: relative;
+    padding: 0.35rem;
+    transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+}
+
+/* Dynamic luxury heart zoom interactivity */
+.nav-utility-target:hover {
+    transform: scale(1.12);
+}
+
+/* Fluid Sizing for the Emoji Symbol */
+.utility-icon {
+    font-size: 1.25rem; /* Matches your lookbook core sizing variables */
+    line-height: 1;
+    display: inline-block;
+}
+
+/* Precise Overlapping Count Pill Badge Calculation Matrix */
+.utility-counter-badge {
+    top: 5px !important;
+    left: 100% !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.65rem !important;
+    font-weight: 600 !important;
+    padding: 0.25em 0.45em !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+/* --- MOBILE & SMALL VIEWPORT RESPONSIVE SCREEN MEDIA RULES --- */
+.fav-active-indicator {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+.fav-active-indicator a{
+    color: inherit !important;          /* Inherits the text color of whatever container it sits inside */
+    text-decoration: none !important;
+}
+.active-badge-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Utility Share Styles for Secondary Icons */
+.nav-utility-target { padding: 0.35rem; transition: transform 0.2s ease; }
+.nav-utility-target:hover { transform: scale(1.1); }
+.utility-icon { font-size: 1.25rem; line-height: 1; }
+.utility-counter-badge { top: 5px !important; left: 100% !important; font-size: 0.65rem !important; font-weight: 600 !important; padding: 0.25em 0.45em !important; }
+.btn-signin { background-color: #ffffff !important; color: #000000 !important; border-radius: 20px !important; font-size: 0.85rem; padding: 0.45rem 1.5rem !important; }

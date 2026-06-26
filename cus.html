@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Collective | YUMNA STUDIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cus.css">
+</head>
+<body class="cus-page-body">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+            <div class="container">
+                <a class="navbar-brand font-elegant text-uppercase tracking-widest" href="index.html">YUMNA</a>
+                
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#fashionNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="fashionNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase tracking-wide">
+                        <li class="nav-item"><a class="nav-link active" href="index.html#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link " href="index.html#collection">Collection</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="d-flex align-items-center gap-3 structural-tools">
+                        
+                        <div class="fav-active-indicator text-white tracking-wide small">
+                           <a href="heart.html"> <span class="fav-label-icon">❤️</span> WISHLIST <span class="active-badge-dot"></span></a>
+                        </div>
+
+                        <div class="cart-box position-relative">
+                            <a href="cart.html" class="nav-utility-target d-inline-block text-decoration-none">
+                                <span class="utility-icon">🛒</span>
+                                <span class="position-absolute translate-middle badge rounded-pill bg-white text-black utility-counter-badge">2</span>
+                            </a>
+                        </div>
+                        
+                        <a href="sign.html" class="text-decoration-none">
+                            <button class="btn btn-signin text-uppercase" type="button">Register</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container cus-workspace-padding">
+        
+        <div class="row mb-5 text-white text-center text-md-start">
+            <div class="col-12">
+                <span class="cus-micro-tag text-uppercase tracking-widest text-muted">Client Echoes</span>
+                <h1 class="display-5 font-elegant text-uppercase tracking-wide mt-1">Studio Reviews</h1>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            
+            <aside class="col-12 col-md-4 text-white">
+                <div class="sticky-metrics-panel p-4">
+                    <h2 class="font-elegant text-uppercase tracking-wide fs-5 mb-3">Overall Rating</h2>
+                    
+                    <div class="d-flex align-items-baseline gap-2 mb-2">
+                        <span class="display-5 font-semibold">4.9</span>
+                        <span class="text-muted small">out of 5 stars</span>
+                    </div>
+                    
+                    <div class="text-warning mb-4 fs-5">★★★★★</div>
+                    
+                    <div class="rating-breakdown-stack font-sans small">
+                        
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="bar-label  text-nowrap">5 star</span>
+                            <div class="progress flex-grow-1 custom-studio-progress">
+                                <div class="progress-bar bg-white" role="progressbar" style="width: 88%"></div>
+                            </div>
+                            <span class="bar-percentage ">88%</span>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="bar-label text-nowrap">4 star</span>
+                            <div class="progress flex-grow-1 custom-studio-progress">
+                                <div class="progress-bar bg-white" role="progressbar" style="width: 9%"></div>
+                            </div>
+                            <span class="bar-percentage ">9%</span>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="bar-label  text-nowrap">3 star</span>
+                            <div class="progress flex-grow-1 custom-studio-progress">
+                                <div class="progress-bar bg-white" role="progressbar" style="width: 3%"></div>
+                            </div>
+                            <span class="bar-percentage text-muted">3%</span>
+                        </div>
+
+                    </div> </div>
+            </aside>
+
+            <main class="col-12 col-md-8">
+                
+                <div class="review-submission-dock p-4 mb-5 text-white">
+                    <h3 class="font-elegant text-uppercase tracking-wide fs-6 mb-4">Share Your Experience</h3>
+                    <form class="fashion-minimal-form">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control minimal-input" placeholder="YOUR NAME" required autocomplete="off">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <select class="form-select minimal-select">
+                                    <option value="5" selected>★★★★★ (5 Stars)</option>
+                                    <option value="4">★★★★☆ (4 Stars)</option>
+                                    <option value="3">★★★☆☆ (3 Stars)</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control minimal-textarea" rows="3" placeholder="WRITE YOUR REVIEW MESSAGE ABOUT COUTURE ALTERATIONS OR MATERIALS..." required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-submit-review text-uppercase tracking-wide px-4 py-2 mt-4">Post Studio Note</button>
+                    </form>
+                </div>
+
+                <div class="reviews-timeline-wrapper d-flex flex-column gap-4">
+                    
+                    <div class="review-message-card p-4 text-white">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <h4 class="font-elegant fs-6 text-uppercase tracking-wide m-0">Aisha R.</h4>
+                                <span class="review-date micro-text text-muted">Verified Custom Order — 2 days ago</span>
+                            </div>
+                            <div class="text-warning small">★★★★★</div>
+                        </div>
+                        <p class="font-elegant-serif text-white opacity-90 m-0">
+                            "The Obsidian Blazer Dress fits absolutely like a dream. The master stitcher team adjusted the length configurations to my exact body profile flawlessly. The darkraw silk fabric has a premium, heavy drape weight."
+                        </p>
+                    </div>
+
+                    <div class="review-message-card p-4 text-white">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <h4 class="font-elegant fs-6 text-uppercase tracking-wide m-0">Devan M.</h4>
+                                <span class="review-date micro-text text-muted">Verified Custom Order — 1 week ago</span>
+                            </div>
+                            <div class="text-warning small">★★★★★</div>
+                        </div>
+                        <p class="font-elegant-serif text-white opacity-90 m-0">
+                            "Commissioning Master Elena for my structured tailoring blazer silhouette was a completely seamless experience. The live status update tracking kept me totally at ease. Highly recommend the bespoke option."
+                        </p>
+                    </div>
+
+                </div> </main>
+
+        </div> </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

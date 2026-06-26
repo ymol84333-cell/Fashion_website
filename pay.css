@@ -1,0 +1,178 @@
+/* ==========================================================================
+   YUMNA STUDIO - SECURE CHECKOUT PAGE ARCHITECTURE (pay.css)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.pay-page-body {
+    background-color: #080a09 !important; /* Premium off-black deep velvet background */
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+/* --- CEILING NAVIGATION HEADER STYLING VISIBILITY --- */
+.custom-navbar {
+    background: rgba(10, 10, 10, 0.9) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    z-index: 1000;
+}
+
+.custom-navbar .navbar-brand {
+    color: #ffffff !important;
+}
+
+.custom-navbar .navbar-nav .nav-link { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 0.85rem; 
+    color: rgba(255, 255, 255, 0.888) !important; 
+    padding: 0 1.2rem !important; 
+}
+
+.secure-lock-tag {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    color: #28a745; /* Clean security accent color */
+}
+
+/* Typography Helpers */
+.font-elegant { font-family: 'Cinzel', serif; }
+.tracking-widest { letter-spacing: 5px; }
+.tracking-wide { letter-spacing: 2px; }
+.pay-workspace-padding { padding-top: 130px; padding-bottom: 60px; }
+
+/* --- LEFT SIDE: AMAZON TYPE CARD STEPS --- */
+.checkout-step-container {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 2rem;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.checkout-step-container:hover {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.step-num-badge {
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* --- PAYMENT METHODS CHASSIS UTILITIES --- */
+.payment-method-selector-box {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.3s ease;
+}
+
+.payment-method-selector-box:hover {
+    border-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.015);
+}
+
+/* Custom styled inputs for the active selection indicators */
+.custom-payment-radio {
+    background-color: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    cursor: pointer;
+}
+.custom-payment-radio:checked {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+.custom-payment-radio:focus {
+    box-shadow: none !important;
+}
+
+.border-secondary-dark {
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* --- EDITORIAL INPUT SHAFTS --- */
+.check-minimal-input {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 0px !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 0.8rem 0.25rem !important;
+    box-shadow: none !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.check-minimal-input::placeholder {
+    color: rgba(255, 255, 255, 0.856) !important;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.check-minimal-input:focus {
+    border-bottom-color: #ffffff !important;
+}
+
+/* --- RIGHT SIDE: STICKY ORDER SUMMARY BOX --- */
+.order-summary-sticky-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    position: sticky;
+    top: 130px; 
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* --- INTERACTIVE TRANSACTION ACTION BUTTON --- */
+.btn-order-produce {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0px !important; 
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem !important;
+    font-weight: 500;
+    letter-spacing: 3px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.btn-order-produce:hover {
+    background-color: transparent !important;
+    color: #000000 !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.micro-legal-text {
+    font-size: 0.65rem;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+.font-semibold { font-weight: 500; }

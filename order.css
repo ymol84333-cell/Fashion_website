@@ -1,0 +1,192 @@
+/* ==========================================================================
+   YUMNA STUDIO - PREMIUM TIMELINE TRACKING SYSTEM ENGINE (order.css)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.track-page-body {
+    background-color: #080a09 !important; /* Matte off-black premium theme backdrop */
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+/* --- CEILING NAVIGATION BAR --- */
+.custom-navbar {
+    background: rgba(10, 10, 10, 0.9) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    z-index: 1000;
+}
+
+.custom-navbar .navbar-brand { color: #ffffff !important; }
+.custom-navbar .navbar-nav .nav-link { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; color: rgba(255, 255, 255, 0.75) !important; padding: 0 1.2rem !important; }
+.custom-navbar .navbar-nav .nav-link:hover { color: #ffffff !important; }
+
+.nav-utility-target { position: relative; padding: 0.35rem; }
+.utility-icon { font-size: 1.25rem; line-height: 1; }
+.utility-counter-badge { top: 5px !important; left: 100% !important; font-size: 0.65rem !important; font-weight: 600 !important; padding: 0.25em 0.45em !important; color: #000000 !important; }
+
+/* Global Fonts Typographic Helper Overrides */
+.font-elegant { font-family: 'Cinzel', serif; }
+.tracking-widest { letter-spacing: 5px; }
+.tracking-wide { letter-spacing: 2px; }
+.track-workspace-padding { padding-top: 145px; padding-bottom: 60px; }
+.track-micro-tag { font-size: 0.75rem; letter-spacing: 5px; display: block; }
+
+/* --- LEFT COLUMN: ROUTE MAP TRACKING CHASSIS --- */
+.timeline-rootmap-box {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.vertical-tracking-pipeline {
+    position: relative;
+    padding-left: 10px;
+}
+
+/* Base Tracking Row Math */
+.tracking-node-row {
+    position: relative;
+    display: flex;
+    align-items: start;
+}
+
+/* The Connecting Solid Pipeline Shaft */
+.node-indicator-bar {
+    position: absolute;
+    top: 24px;
+    left: 11px;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* The Circle Marker Base */
+.node-dot-marker {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #080a09;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+/* --- STATE VARIANT SHIFTS --- */
+
+/* Node State A: Milestone Checked & Passed */
+.tracking-node-row.active-passed .node-dot-marker {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #000000;
+}
+.tracking-node-row.active-passed .node-indicator-bar {
+    background-color: #28a745; /* Green active connection lane */
+}
+
+/* Node State B: Milestone Active & Ongoing right now */
+.tracking-node-row.active-ongoing .node-dot-marker {
+    border-color: #28a745;
+    background-color: #080a09;
+    color: #28a745;
+}
+
+/* Micro Glowing Pulse Core Indicator */
+.pulse-core {
+    width: 8px;
+    height: 8px;
+    background-color: #28a745;
+    border-radius: 50%;
+    display: inline-block;
+    animation: trackGlowPulse 1.8s infinite ease-in-out;
+}
+
+/* Node State C: Future Unreached Status */
+.tracking-node-row.pending-state .node-dot-marker {
+    background-color: #111412;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.micro-date {
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-top: 2px;
+}
+
+/* --- RIGHT COLUMN: SIDEBAR DETAILS MANIFEST --- */
+.track-summary-sidebar {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.tracked-product-thumbnail {
+    width: 70px;
+    height: 95px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
+}
+
+/* Ongoing Pulse Animation Timeline Loop Frame */
+@keyframes trackGlowPulse {
+    0% { transform: scale(0.8); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(0.8); opacity: 0.5; }
+}
+
+.font-semibold { font-weight: 500; }
+.btn-signin {
+    background-color: #ffffff;
+    color: #000000 !important;
+    border: 1px solid #ffffff;
+    border-radius: 20px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.45rem 1.5rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-signin:hover {
+    background-color: transparent;
+    color: #ffffff !important;
+}
+.fav-active-indicator a{
+    color: inherit !important;          /* Inherits the text color of whatever container it sits inside */
+    text-decoration: none !important;
+}
+.fav-active-indicator {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}

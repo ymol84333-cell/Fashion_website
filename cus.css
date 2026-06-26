@@ -1,0 +1,189 @@
+/* ==========================================================================
+   YUMNA STUDIO - CUSTOMER COLLECTIVE STYLESHEET (cus.css)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Force global anchor properties to crisp readable white colors */
+a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.cus-page-body {
+    background-color: #080a09 !important; /* Premium signature dark mode velvet canvas backdrop */
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+/* --- CEILING STABLE FIXED NAVBAR --- */
+.custom-navbar {
+    background: rgba(10, 10, 10, 0.9) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    z-index: 1000;
+}
+
+.custom-navbar .navbar-brand {
+    color: #ffffff !important;
+}
+
+.custom-navbar .navbar-nav .nav-link { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 0.85rem; 
+    color: rgba(255, 255, 255, 0.75) !important; 
+    padding: 0 1.2rem !important; 
+}
+.custom-navbar .navbar-nav .nav-link:hover { color: #ffffff !important; }
+
+/* Navbar Utility Icons Matrix */
+.nav-utility-target { position: relative; padding: 0.35rem; transition: transform 0.2s ease; }
+.nav-utility-target:hover { transform: scale(1.1); }
+.utility-icon { font-size: 1.25rem; line-height: 1; }
+.utility-counter-badge { top: 5px !important; left: 100% !important; font-size: 0.65rem !important; font-weight: 600 !important; padding: 0.25em 0.45em !important; color: #000000 !important; }
+
+/* Font Utilities */
+.font-elegant { font-family: 'Cinzel', serif; }
+.font-elegant-serif { font-family: 'Playfair Display', serif; font-style: italic; }
+.tracking-widest { letter-spacing: 5px; }
+.tracking-wide { letter-spacing: 2px; }
+.cus-workspace-padding { padding-top: 135px; padding-bottom: 60px; }
+.cus-micro-tag { font-size: 0.75rem; letter-spacing: 5px; display: block; }
+
+/* --- LEFT COLUMN: STICKY METRICS RATING CARD --- */
+.sticky-metrics-panel {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    position: sticky;
+    top: 135px; /* Safely links right against the ceiling clearance margin line */
+}
+
+/* Amazon progress track bar background color customization adjustments */
+.custom-studio-progress {
+    height: 6px !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 0px !important;
+}
+
+.bar-label {
+    width: 45px;
+}
+.bar-percentage {
+    width: 35px;
+    text-align: right;
+}
+
+/* --- RIGHT COLUMN: SUBMISSION INPUT ENGINE DOCK --- */
+.review-submission-dock {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.fashion-minimal-form .minimal-input,
+.minimal-select, .minimal-textarea {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 0px !important;
+    color: #ffffff !important;
+    font-size: 0.85rem;
+    padding: 0.8rem 0.25rem !important;
+    box-shadow: none !important;
+}
+
+.minimal-select {
+    cursor: pointer;
+}
+.minimal-select option {
+    background-color: #0d100e !important; /* Keeps option items dark tinted */
+    color: #ffffff;
+}
+
+.fashion-minimal-form .minimal-input::placeholder,
+.minimal-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3) !important;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.fashion-minimal-form .minimal-input:focus,
+.minimal-select:focus, .minimal-textarea:focus {
+    border-bottom-color: #ffffff !important;
+}
+
+.btn-submit-review {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0px !important;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem !important;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease !important;
+}
+.btn-submit-review:hover {
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+
+/* --- VERIFIED TIMELINE LOG REVIEW CARDS --- */
+.review-message-card {
+    background: rgba(255, 255, 255, 0.01) !important;
+    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+    transition: border-color 0.3s ease;
+}
+
+.review-message-card:hover {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.micro-text {
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+}
+.font-semibold { font-weight: 500; }
+.fav-active-indicator {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+.fav-active-indicator a{
+    color: inherit !important;          /* Inherits the text color of whatever container it sits inside */
+    text-decoration: none !important;
+}
+.btn-signin {
+    background-color: #ffffff;
+    color: #000000 !important;
+    border: 1px solid #ffffff;
+    border-radius: 20px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.45rem 1.5rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-signin:hover {
+    background-color: transparent;
+    color: #ffffff !important;
+}

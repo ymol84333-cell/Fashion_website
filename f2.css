@@ -1,0 +1,307 @@
+/* ==========================================================================
+   YOUI FASHION - PREMIUM MARKETPLACE ENGINE (explore.css)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.shop-page-body {
+    background-color: #0c0e0d !important; /* Amazon dark mode matte charcoal black */
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+/* Typography Overrides */
+.font-elegant { font-family: 'Cinzel', serif; }
+.font-elegant-serif { font-family: 'Playfair Display', serif; font-style: italic; }
+.tracking-widest { letter-spacing: 5px; }
+.tracking-wide { letter-spacing: 2px; }
+
+/* --- AMAZON-INSPIRED PREMIUM NAV BAR --- */
+.shop-navbar {
+    background: rgba(15, 18, 16, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.shop-brand {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.shop-brand .sub-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 3px;
+}
+
+/* Amazon Search Box Components Setup */
+.dropdown-filter-btn {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.8rem;
+}
+
+.shop-search-input {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    font-size: 0.85rem;
+}
+.shop-search-input:focus {
+    border-color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.btn-luxury-search {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border: 1px solid #ffffff !important;
+}
+
+.btn-luxury-search:hover {
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+
+/* --- FILTER SIDEBAR ELEMENTS --- */
+.filter-sidebar {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-links li {
+    margin-bottom: 0.75rem;
+}
+
+.sidebar-links a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
+}
+
+.sidebar-links a:hover, .sidebar-links a.active {
+    color: #ffffff;
+    padding-left: 4px;
+}
+
+.sort-dropdown {
+    width: auto;
+    font-size: 0.8rem;
+    padding: 0.45rem 2rem 0.45rem 1rem;
+}
+
+/* --- PREMIUM INTERACTIVE GRID PRODUCT CARDS --- */
+.product-premium-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0px; /* Geometric modern grid borders */
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-image-frame {
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.badge-premium-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255,255,255,0.2);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+}
+
+/* Card Zoom Interactivity Rules */
+.product-premium-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.pointer { cursor: pointer; }
+.custom-navbar {
+    background: rgba(10, 10, 10, 0.65) !important; /* Semi-translucent dark tone */
+    backdrop-filter: blur(12px); /* Premium frosty background blur */
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Minimalist horizontal divider line */
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    transition: all 0.4s ease;
+}
+
+/* Navigation Links Decoration */
+.custom-navbar .navbar-nav .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover,
+.custom-navbar .navbar-nav .nav-link.active {
+    color: #ffffff !important;
+}
+
+/* Elegant Underline Indicator for Active/Hover State */
+.custom-navbar .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1.2rem;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover::after,
+.custom-navbar .navbar-nav .nav-link.active::after {
+    width: calc(100% - 2.4rem);
+}
+
+/* --- SEARCH BAR DECORATION --- */
+.search-input {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px; /* Sharp editorial design edges */
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.search-input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    box-shadow: none; 
+    width: 240px; 
+}
+
+.btn-signin {
+    background-color: #ffffff;
+    color: #000000 !important;
+    border: 1px solid #ffffff;
+    border-radius: 20px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.45rem 1.5rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-signin:hover {
+    background-color: transparent;
+    color: #ffffff !important;
+}
+/* --- PRODUCT SELECTOR & INPUT WIDGETS --- */
+.control-micro-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: block;
+}
+
+/* Dark Theme Dropdowns Custom Formatting */
+.product-utility-select {
+    background-color: #161a18 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border-radius: 0px !important;
+    font-size: 0.8rem !important;
+    padding: 0.4rem 2rem 0.4rem 0.6rem !important;
+    cursor: pointer;
+}
+
+/* Number Quantity Box Sizing Rules */
+.quantity-input-wrapper {
+    width: 70px;
+}
+
+.product-utility-input {
+    background-color: #161a18 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border-radius: 0px !important;
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.4rem !important;
+    text-align: center;
+}
+
+.product-utility-select:focus, .product-utility-input:focus {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: none !important;
+}
+
+/* --- THE MARKETPLACE ADD TO CART BUTTON --- */
+.btn-add-to-cart {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0px !important; /* Sharp high-fashion layout edge */
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 0.75rem !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.btn-add-to-cart:hover {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.fs-7 { font-size: 0.75rem !important; }
+.font-bold { font-weight: 600; }
+.fav-active-indicator a{
+    color: inherit !important;          /* Inherits the text color of whatever container it sits inside */
+    text-decoration: none !important;
+}
+.fav-active-indicator {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}

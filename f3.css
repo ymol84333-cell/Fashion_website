@@ -1,0 +1,125 @@
+/* ==========================================================================
+   YOUI FASHION - CUSTOM COUTURE ASSEMBLER WINDOW (customize.css)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital@1&display=swap');
+
+.customize-page-body {
+    background-color: #0b0d0c !important; /* Premium workspace charcoal slate */
+    min-height: 100vh;
+    padding-top: 110px; /* Leaves clear breathing space below the navigation bar */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Synchronized Nav Styling Overrides */
+.custom-navbar {
+    background: rgba(10, 10, 10, 0.75) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.custom-navbar .navbar-nav .nav-link { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); padding: 0 1.2rem !important; }
+.custom-navbar .navbar-nav .nav-link.active, .custom-navbar .navbar-nav .nav-link:hover { color: #ffffff !important; }
+.search-input { background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; color: #ffffff !important; font-size: 0.85rem; padding: 0.45rem 1rem; width: 190px; }
+.btn-signin { background-color: #ffffff !important; color: #000000 !important; border-radius: 20px !important; font-size: 0.85rem; padding: 0.45rem 1.5rem !important; }
+
+/* Font Utilities */
+.font-elegant { font-family: 'Cinzel', serif; }
+.font-elegant-serif { font-family: 'Playfair Display', serif; font-style: italic; }
+.tracking-widest { letter-spacing: 5px; }
+.tracking-wide { letter-spacing: 2px; }
+
+/* Upper Custom Header Selectors */
+.studio-micro-tag { font-size: 0.75rem; letter-spacing: 5px; }
+.config-label { font-size: 0.65rem; letter-spacing: 1px; display: block; }
+.studio-select { background-color: #131715 !important; border: 1px solid rgba(255, 255, 255, 0.08) !important; color: #ffffff !important; border-radius: 0px !important; font-size: 0.8rem !important; padding: 0.5rem 1rem !important; cursor: pointer; }
+.studio-select:focus { border-color: rgba(255, 255, 255, 0.3) !important; box-shadow: none !important; }
+
+/* Geometric Stitcher Presentation Framework */
+.stitcher-profile-card {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 0px;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.stitcher-display-frame {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Live Badges Status Matrix styles */
+.badge-status {
+    position: absolute; top: 1rem; left: 1rem;
+    font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 0.65rem;
+    text-transform: uppercase; letter-spacing: 1px; padding: 0.4rem 0.8rem; border-radius: 0px; z-index: 5;
+}
+
+.badge-status.available { background-color: rgba(12, 22, 14, 0.9); border: 1px solid #28a745; color: #ffffff; }
+.badge-status.busy { background-color: rgba(40, 10, 15, 0.9); border: 1px solid #dc3545; color: #ffffff; }
+.badge-status.unavailable { background-color: rgba(30, 30, 30, 0.9); border: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.6); }
+.badge-status.fasttrack { background-color: rgba(220, 130, 10, 0.9); border: 1px solid #ffc107; color: #ffffff; }
+.badge-status.restocking { background-color: rgba(10, 30, 45, 0.9); border: 1px solid #17a2b8; color: #ffffff; }
+.badge-status.consulting { background-color: rgba(60, 20, 80, 0.9); border: 1px solid #bc13fe; color: #ffffff; }
+
+.border-dark { border-color: rgba(255, 255, 255, 0.06) !important; }
+
+/* Interactive Hover States for Active Cards */
+.stitcher-profile-card.status-available:hover,
+.stitcher-profile-card.status-fasttrack:hover,
+.stitcher-profile-card.status-consulting:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Action Button Formatting */
+.btn-hire-stitcher, .btn-hire-fasttrack, .btn-hire-consulting {
+    background-color: #ffffff !important; color: #000000 !important; border: 1px solid #ffffff !important;
+    border-radius: 0px !important; font-family: 'Cinzel', serif; font-size: 0.75rem !important;
+    letter-spacing: 1.5px; font-weight: 500; transition: all 0.3s ease !important;
+}
+.btn-hire-stitcher:hover, .btn-hire-fasttrack:hover, .btn-hire-consulting:hover { background-color: transparent !important; color: #ffffff !important; }
+
+.btn-hire-fasttrack { background-color: #ffc107 !important; border-color: #ffc107 !important; }
+.btn-hire-fasttrack:hover { color: #ffc107 !important; border-color: #ffc107 !important; }
+
+/* Locked/Inactive Card Visual Muting State */
+.stitcher-profile-card.status-busy,
+.stitcher-profile-card.status-unavailable,
+.stitcher-profile-card.status-restocking {
+    opacity: 0.45;
+}
+
+.btn-stitcher-disabled {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    color: rgba(255, 255, 255, 0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 0px !important;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem !important;
+    letter-spacing: 1.5px;
+    cursor: not-allowed !important;
+}
+
+.font-semibold { font-weight: 500; }
+.fav-active-indicator a{
+    color: inherit !important;          /* Inherits the text color of whatever container it sits inside */
+    text-decoration: none !important;
+}
+.fav-active-indicator {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}

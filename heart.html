@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Favorites | YOUI FASHION</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="heart.css">
+</head>
+<body class="fav-page-body">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+            <div class="container">
+                <a class="navbar-brand font-elegant text-uppercase tracking-widest" href="index.html">YUMNA</a>
+                
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#fashionNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="fashionNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase tracking-wide">
+                        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="index.html#collection">Collection</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="d-flex align-items-center gap-3 structural-tools">
+                        
+                        <div class="fav-active-indicator text-white tracking-wide small">
+                            <span class="fav-label-icon">❤️</span> WISHLIST <span class="active-badge-dot"></span>
+                        </div>
+
+                        <div class="cart-box position-relative">
+                            <a href="cart.html" class="nav-utility-target d-inline-block text-decoration-none">
+                                <span class="utility-icon">🛒</span>
+                                <span class="position-absolute translate-middle badge rounded-pill bg-white text-black utility-counter-badge">2</span>
+                            </a>
+                        </div>
+                        
+                        <a href="sign.html" class="text-decoration-none">
+                            <button class="btn btn-signin text-uppercase" type="button">Sign In</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container fav-workspace-padding">
+        
+        <div class="row mb-5 text-white">
+            <div class="col-12 text-center text-sm-start">
+                <span class="fav-micro-tag text-uppercase tracking-widest text-muted">Curated Canvas</span>
+                <h1 class="display-6 font-elegant text-uppercase tracking-wide mt-1">Your Saved Lookbooks</h1>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
+            
+            <div class="col">
+                <div class="fav-product-card h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="fav-image-frame" style="background-image: url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=80');">
+                            <button class="btn btn-remove-fav" title="Remove from Wishlist">&times;</button>
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-elegant text-white text-uppercase tracking-wide fs-6 mb-1">Obsidian Blazer Dress</h3>
+                            <p class="font-elegant-serif small text-muted mb-2">Lookbook Edition 01</p>
+                            <span class="text-white font-semibold">$245.00</span>
+                        </div>
+                    </div>
+                    <div class="p-3 pt-0">
+                        <a href="p1.html" class="btn btn-view-item text-uppercase w-100 py-2">View Dress Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="fav-product-card h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="fav-image-frame" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80');">
+                            <button class="btn btn-remove-fav" title="Remove from Wishlist">&times;</button>
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-elegant text-white text-uppercase tracking-wide fs-6 mb-1">Minimalist Trench</h3>
+                            <p class="font-elegant-serif small text-muted mb-2">Premium Cotton Draping</p>
+                            <span class="text-white font-semibold">$195.00</span>
+                        </div>
+                    </div>
+                    <div class="p-3 pt-0">
+                        <button class="btn btn-view-item text-uppercase w-100 py-2">View Dress Details</button>
+                    </div>
+                </div>
+            </div>
+
+        </div> <div class="text-center text-sm-start mt-5 pt-3 border-top border-secondary-dark">
+            <a href="explore.html" class="continue-shopping-link font-elegant small text-decoration-none text-uppercase text-muted">&larr; Return to Store Gallery</a>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
