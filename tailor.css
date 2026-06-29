@@ -1,0 +1,190 @@
+/* ==========================================================================
+   YUMNA STUDIO - BESPOKE TAILORS COLLECTIVE DESIGN SYSTEM (tailor.css)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Strip native link layouts */
+a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.tailor-page-body {
+    background-color: #080a09 !important; /* Uniform luxury off-black canvas velvet backdrop */
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+/* --- CEILING NAVIGATION HEADER BAR --- */
+.custom-navbar {
+    background: rgba(10, 10, 10, 0.9) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    z-index: 1000;
+}
+.custom-navbar .navbar-brand { color: #ffffff !important; }
+.custom-navbar .navbar-nav .nav-link { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; color: rgba(255, 255, 255, 0.75) !important; padding: 0 1.2rem !important; }
+.custom-navbar .navbar-nav .nav-link.active, .custom-navbar .navbar-nav .nav-link:hover { color: #ffffff !important; }
+
+.nav-utility-target { position: relative; padding: 0.35rem; transition: transform 0.2s ease; }
+.nav-utility-target:hover { transform: scale(1.1); }
+.utility-icon { font-size: 1.25rem; line-height: 1; }
+.utility-counter-badge { top: 5px !important; left: 100% !important; font-size: 0.65rem !important; font-weight: 600 !important; padding: 0.25em 0.45em !important; color: #000000 !important; }
+
+/* Typographic Variables */
+.font-elegant { font-family: 'Cinzel', serif; }
+.font-elegant-serif { font-family: 'Playfair Display', serif; font-style: italic; }
+.tracking-widest { letter-spacing: 5px; }
+.tracking-wide { letter-spacing: 2px; }
+.tailor-workspace-padding { padding-top: 135px; padding-bottom: 60px; }
+.tailor-micro-tag { font-size: 0.75rem; letter-spacing: 5px; display: block; }
+.border-secondary-dark { border-color: rgba(255, 255, 255, 0.06) !important; }
+
+/* --- DYNAMIC FILTER INPUT BAR --- */
+.filter-search-input {
+    background-color: rgba(255, 255, 255, 0.015) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 0px !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 1px;
+    padding: 0.9rem 1.2rem !important;
+    box-shadow: none !important;
+    text-transform: uppercase;
+    transition: border-color 0.3s ease !important;
+}
+.filter-search-input:focus {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+.filter-search-icon {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+}
+
+/* --- SECTION B: GEOMETRIC PROFILE PREVIEW CARDS --- */
+.tailor-profile-card {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 0px; /* Sharp editorial design boundaries */
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+.tailor-profile-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.tailor-preview-img {
+    height: 290px;
+    background-size: cover;
+    background-position: center top;
+}
+
+.btn-studio-action {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 0px !important;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem !important;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease !important;
+}
+.tailor-profile-card:hover .btn-studio-action {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #ffffff !important;
+}
+
+/* --- SECTION C: ATELIER REGISTRATION ONBOARDING DOCK --- */
+.join-atelier-form-box {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.fashion-minimal-form .minimal-input,
+.minimal-select, .minimal-textarea {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 0px !important;
+    color: #ffffff !important;
+    font-size: 0.8rem;
+    padding: 0.9rem 0.25rem !important;
+    box-shadow: none !important;
+    text-transform: uppercase;
+}
+
+.minimal-select { color: rgba(255, 255, 255, 0.3) !important; cursor: pointer; }
+.minimal-select option { background-color: #080a09 !important; color: #ffffff !important; }
+
+.fashion-minimal-form .minimal-input::placeholder,
+.minimal-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.25) !important;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.fashion-minimal-form .minimal-input:focus,
+.minimal-select:focus, .minimal-textarea:focus {
+    border-bottom-color: #ffffff !important;
+}
+
+/* Master Checkout Join Action Trigger Override */
+.btn-submit-partnership {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0px !important;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem !important;
+    font-weight: 500;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.btn-submit-partnership:hover {
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+.btn-signin {
+    background-color: #ffffff;
+    color: #000000 !important;
+    border: 1px solid #ffffff;
+    border-radius: 20px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.45rem 1.5rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-signin:hover {
+    background-color: transparent;
+    color: #ffffff !important;
+}
+.fav-active-indicator a{
+    color: inherit !important;          /* Inherits the text color of whatever container it sits inside */
+    text-decoration: none !important;
+}
+.fav-active-indicator {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
